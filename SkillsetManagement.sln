@@ -5,11 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{A439D49B-8048-4918-AFFD-FCDF3DF9B710}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skillset_DAL", "Skillset_DAL\Skillset_DAL.csproj", "{2C5954C6-E497-4A20-BD12-B6CCCA268FE6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skillset-DAL", "Skillset_DAL\Skillset-DAL.csproj", "{2C5954C6-E497-4A20-BD12-B6CCCA268FE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skillset_BLL", "Skillset_BLL\Skillset_BLL.csproj", "{F3ACFE26-748C-4A07-9C8A-77AFE978A9A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skillset-BLL", "Skillset_BLL\Skillset-BLL.csproj", "{F3ACFE26-748C-4A07-9C8A-77AFE978A9A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skillset_PL", "Skillset_PL\Skillset_PL.csproj", "{1F98A48F-6D25-4E05-BC60-667BDBDF6CA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skillset-PL", "Skillset_PL\Skillset-PL.csproj", "{1F98A48F-6D25-4E05-BC60-667BDBDF6CA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

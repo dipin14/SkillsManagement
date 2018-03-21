@@ -42,6 +42,19 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Skillset_BLL\Skillset-BLL.csproj">
+      <Project>{f3acfe26-748c-4a07-9c8a-77afe978a9a6}</Project>
+      <Name>Skillset-BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Skillset_DAL\Skillset-DAL.csproj">
+      <Project>{2c5954c6-e497-4a20-bd12-b6ccca268fe6}</Project>
+      <Name>Skillset-DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataTransferObjects\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
