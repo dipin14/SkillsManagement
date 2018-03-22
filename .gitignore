@@ -1,4 +1,4 @@
-#ignore bin files
+#ignore bin files and obj files
 bin/
 obj/
 

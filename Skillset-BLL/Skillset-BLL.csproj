@@ -40,7 +40,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EmployeeServices.cs" />
+    <Compile Include="Services\IEmployeeServices.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Skillset_BLL.dll" />
+    <Content Include="bin\Debug\Skillset_BLL.pdb" />
+    <Content Include="obj\Debug\Skillset-BLL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Skillset_BLL.dll" />
+    <Content Include="obj\Debug\Skillset_BLL.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{a439d49b-8048-4918-affd-fcdf3df9b710}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Skillset-DAL\Skillset-DAL.csproj">
+      <Project>{2c5954c6-e497-4a20-bd12-b6ccca268fe6}</Project>
+      <Name>Skillset-DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
