@@ -8,24 +8,9 @@ namespace Skillset_PL.ViewModels
 {
     public class SkillViewModel
     {
-        [Key]
-        int skillId;
         string skillName;
         string skillDescription;
-
-        public int SkillId
-        {
-            get
-            {
-                return skillId;
-            }
-
-            set
-            {
-                skillId = value;
-            }
-        }
-
+        
         [Required]
         [Display(Name = "Skill Name")]
         public string SkillName
