@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "EmployeeRating";
+}
+
+<h2>EmployeeRating</h2>
+
+<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+</head>
+<h2>All Questions</h2>
+<div class="row">
+    <div class="col-lg-9">
+        @foreach (var item in Model)
+        {
+
+            <div onmouseout="CRateSelected(@item.QuestionId)">
+                <input id="Rating @item.QuestionId" hidden />
+                <span class="starFade" id="Rate1 @item.QuestionId" onclick="CRate(@item.QuestionId, 1)" onmouseover="CRateOver(@item.QuestionId,1)" onmouseout="CRateOut(@item.QuestionId,1)"></span>
+                <span class="starFade" id="Rate2 @item.QuestionId" onclick="CRate(@item.QuestionId, 2)" onmouseover="CRateOver(@item.QuestionId,2)" onmouseout="CRateOut(@item.QuestionId,2)"></span>
+                <span class="starFade" id="Rate3 @item.QuestionId" onclick="CRate(@item.QuestionId, 3)" onmouseover="CRateOver(@item.QuestionId,3)" onmouseout="CRateOut(@item.QuestionId,3)"></span>
+                <span class="starFade" id="Rate4 @item.QuestionId" onclick="CRate(@item.QuestionId, 4)" onmouseover="CRateOver(@item.QuestionId,4)" onmouseout="CRateOut(@item.QuestionId,4)"></span>
+                <span class="starFade" id="Rate5 @item.QuestionId" onclick="CRate(@item.QuestionId, 5)" onmouseover="CRateOver(@item.QuestionId,5)" onmouseout="CRateOut(@item.QuestionId,5)"></span>
+            </div>
+            <div class="card" style="width:100%;">
+
+                @*<a href = "#" onclick="AuthenticateUser(@item.QuestionId,'@item.QuestionTitle','@item.QuestionDescription')">*@
+                @*<a href="@Url.Action("GetAnswers","Answer",new { qno = item.QuestionId,qtitle=item.QuestionTitle,qdesc=item.QuestionDescription })">*@
+
+                <div class="row">
+                    <div class="col-md-2" style="padding-left:25px;width:130px;">
+                       
+                       
+                    </div>
+
+                    <div class="col-md-8" style="padding-left:25px;">
+                      
+
+                    </div>
+                    <div class="col-md-2" style="color:grey;padding-left:0px;">
+
+                      
+                    </div>
+                </div>
+
+            </div><br />
+
+
+
+
+        }
+    </div>
+    </div>

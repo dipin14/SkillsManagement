@@ -1,0 +1,65 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/*Card layout*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
+.starFade{
+    background-image:url('/Images/rate2.png');
+    min-width:20px;
+    min-height:20px;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.starFadeN{
+    background-image:url('/Images/StarFade.gif');
+    min-width:30px;
+    min-height:30px;
+    display:inline-block;
+}
+
+.starGlow{
+ 
+    background-image:url('/Images/rate1.png');
+    min-width:20px;
+    min-height:20px;
+    display:inline-block;
+    cursor:pointer;
+}
+.starGlowN{
+    background-image:url('/Images/starglow.gif');
+    min-width:30px;
+    min-height:30px;
+    display:inline-block;
+}
