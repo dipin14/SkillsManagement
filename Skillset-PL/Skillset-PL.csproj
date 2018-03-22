@@ -126,7 +126,22 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+<<<<<<< HEAD:Skillset-PL/Skillset-PL.csproj
     <Folder Include="Models\" />
+=======
+    <Folder Include="Controllers\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{a439d49b-8048-4918-affd-fcdf3df9b710}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Skillset_BLL\Skillset-BLL.csproj">
+      <Project>{f3acfe26-748c-4a07-9c8a-77afe978a9a6}</Project>
+      <Name>Skillset-BLL</Name>
+    </ProjectReference>
+>>>>>>> a694b41599289fb8f941e5de530e1d11219b573b:Skillset-PL/Skillset-PL.csproj
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
