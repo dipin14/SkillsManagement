@@ -10,7 +10,9 @@ namespace Skillset_DAL.DTO
    public interface IReportingStaff
     {
         IEnumerable<Employee> GetEmployeeDetails(int managerCode);
-        IEnumerable<SkillRating> GetSkillDetails(int managerCode);
+        IEnumerable<SkillRating> GetSkillRatingsDetails(string employeeCode);
         IEnumerable<Designation> GetDesignationDetails(int managerCode);
+        IEnumerable<Skill> GetSkillDetails();
+        IEnumerable<Rating> GetRatingDetails();
     }
 }

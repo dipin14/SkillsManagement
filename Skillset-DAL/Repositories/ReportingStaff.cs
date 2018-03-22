@@ -10,13 +10,18 @@ namespace Skillset_DAL.DTO
 {
     public class ReportingStaff : IReportingStaff
     {
+        /// <summary>
+        /// Retrieve designations of employees under a manager
+        /// </summary>
+        /// <param name="managerCode"></param>
+        /// <returns>List of Designations</returns>
        public IEnumerable<Designation> GetDesignationDetails(int managerCode)
         {
             using (SkillsetDbContext context = new SkillsetDbContext())
             {
                 var designations = (from d in context.Designations
                                     from e in context.Employees
-                                    where (e.ManagerCode == managerCode && d.Id == e.DesignationId)
+                                    where (e.Status && e.ManagerCode == managerCode && d.Id == e.DesignationId)
                                     select d).ToList();
                                   
                 return designations;
@@ -24,25 +29,65 @@ namespace Skillset_DAL.DTO
                 
         }
 
+        /// <summary>
+        /// Retrieve all skills
+        /// </summary>
+        /// <returns>List of Skills</returns>
+        public IEnumerable<Skill> GetSkillDetails()
+        {
+            using (SkillsetDbContext context = new SkillsetDbContext())
+            {
+                var skills = context.Skills.ToList();
+
+                return skills;
+            }
+
+        }
+
+        /// <summary>
+        /// Retrieve ratings
+        /// </summary>
+        /// <returns>List of Ratings</returns>
+        public IEnumerable<Rating> GetRatingDetails()
+        {
+            using (SkillsetDbContext context = new SkillsetDbContext())
+            {
+                var ratings = context.Ratings.ToList();
+
+                return ratings;
+            }
+
+        }
+
+        /// <summary>
+        /// Retrieve List of employees under a manager
+        /// </summary>
+        /// <param name="managerCode"></param>
+        /// <returns>List of Employees</returns>
         public IEnumerable<Employee> GetEmployeeDetails(int managerCode)
         {
             using (SkillsetDbContext context = new SkillsetDbContext())
             {
-                var employees = context.Employees.ToList().Where(s => s.ManagerCode==managerCode);
+                var employees = context.Employees.ToList().Where(s => s.Status && s.ManagerCode==managerCode);
                 return employees;
             }
             
         }
 
-        public IEnumerable<SkillRating> GetSkillDetails(int managerCode)
+        /// <summary>
+        /// Retrieve List of skill ratings of an employee
+        /// </summary>
+        /// <param name="managerCode"></param>
+        /// <returns>List of SkillRatings</returns>
+        public IEnumerable<SkillRating> GetSkillRatingsDetails(string employeeCode)
         {
             using (SkillsetDbContext context = new SkillsetDbContext())
             {
-                var skills = (from d in context.SkillRatings
+                var skillRatings = (from d in context.SkillRatings
                               from e in context.Employees
-                              where (e.ManagerCode == managerCode && d.EmployeeId==e.Id)
+                              where (e.Status && e.EmployeeCode.Equals(employeeCode) && d.EmployeeId==e.Id && d.Status)
                               select d).ToList();
-                return skills;
+                return skillRatings;
             }
            
         }

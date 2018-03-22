@@ -11,5 +11,6 @@ namespace Skillset_DAL.Models
         public int skillId { get; set; }
         public string skillName { get; set; }
         public string skillDescription { get; set; }
+        public bool Status { get; set; }
     }
 }
