@@ -20,6 +20,8 @@ namespace Skillset_DAL.ContextClass
             modelBuilder.Entity<Skill>().Property(c => c.skillName).HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute("SK_Name") { IsUnique = true }));
         }
         public DbSet<Skill> Skills { get; set; }
-        public DbSet<Login> Login { get; set; }
+        public DbSet<Login> Logins { get; set; }
+        public DbSet<Designation> Desinations { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
 }
