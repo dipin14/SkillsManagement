@@ -46,7 +46,7 @@
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Skillset_DAL\Skillset-DAL.csproj">
+    <ProjectReference Include="..\Skillset-DAL\Skillset-DAL.csproj">
       <Project>{2c5954c6-e497-4a20-bd12-b6ccca268fe6}</Project>
       <Name>Skillset-DAL</Name>
     </ProjectReference>
